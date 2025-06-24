@@ -1,8 +1,8 @@
 ---
 layout: profiles
 permalink: /people/
-title: Meet the Team
-description: Researchers
+title: our team
+description:
 nav: true
 nav_order: 7
 
