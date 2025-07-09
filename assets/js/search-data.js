@@ -30,16 +30,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-repositories",
-          title: "repositories",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/repositories/";
-          },
-        },{id: "nav-our-team",
-          title: "our team",
-          description: "",
+        },{id: "nav-people",
+          title: "people",
+          description: "academics of the HausaNLP team",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
@@ -71,10 +64,7 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
+            },},{id: "news-a-long-announcement-with-details",
           title: 'A long announcement with details',
           description: "",
           section: "News",handler: () => {
@@ -82,7 +72,85 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-hausa-multimodal-machine-translation",
+          section: "News",},{id: "news-the-news-feature-was-activated-if-you-re-seeing-this-it-worked",
+          title: 'The news feature was activated. If you’re seeing this, it worked.',
+          description: "",
+          section: "News",},{id: "people-ahmadu-shehu",
+          title: 'Ahmadu Shehu',
+          description: "Assistant Professor of English and Literature at the American University of Nigeria, Yola",
+          section: "People",handler: () => {
+              window.location.href = "/people/ahmadu/";
+            },},{id: "people-amina-imam-abubakar",
+          title: 'Amina Imam Abubakar',
+          description: "Lecturer, interested in playful interfaces, tangible interaction and generative music.",
+          section: "People",handler: () => {
+              window.location.href = "/people/amina/";
+            },},{id: "people-auwal-shehu-ali",
+          title: 'Auwal Shehu Ali',
+          description: "Lecturer in Computer Science at Bayero University,Kano (BUK)",
+          section: "People",handler: () => {
+              window.location.href = "/people/auwal/";
+            },},{id: "people-bello-shehu-bello",
+          title: 'Bello Shehu Bello',
+          description: "Lecturer in Computer Science at Bayero University,Kano (BUK)",
+          section: "People",handler: () => {
+              window.location.href = "/people/bsbello/";
+            },},{id: "people-ibrahium-said-ahmad",
+          title: 'Ibrahium Said Ahmad',
+          description: "Lecturer in Information Technology at Bayero University,Kano (BUK)",
+          section: "People",handler: () => {
+              window.location.href = "/people/ibrahim/";
+            },},{id: "people-idris-abdulmuminu",
+          title: 'Idris Abdulmuminu',
+          description: "Lecturer in Computer Science at Ahmadu Bello University, Zaria (ABU)",
+          section: "People",handler: () => {
+              window.location.href = "/people/idrisabdul/";
+            },},{id: "people-jaafar-zubariru-maitama",
+          title: 'Jaafar Zubariru Maitama',
+          description: "Lecturer in Information Technology at Bayero University,Kano (BUK)",
+          section: "People",handler: () => {
+              window.location.href = "/people/jaafar/";
+            },},{id: "people-mahmud-yusuf-ahmad",
+          title: 'Mahmud Yusuf Ahmad',
+          description: "Lecturer in Computer Science at Bayero University,Kano (BUK)",
+          section: "People",handler: () => {
+              window.location.href = "/people/mahmud/";
+            },},{id: "people-murja-sani-gadanya",
+          title: 'Murja Sani Gadanya',
+          description: "Lecturer in Information Technology at Bayero University, Kano",
+          section: "People",handler: () => {
+              window.location.href = "/people/murja/";
+            },},{id: "people-abdullahi-saheed-salahudeen",
+          title: 'Abdullahi Saheed Salahudeen',
+          description: "Lecturer in Computer Science at Kaduna State University (KASU)",
+          section: "People",handler: () => {
+              window.location.href = "/people/saheed/";
+            },},{id: "people-saminu-mohammad-aliyu",
+          title: 'Saminu Mohammad Aliyu',
+          description: "Lecturer in Computer Science at Bayero University,Kano (BUK)",
+          section: "People",handler: () => {
+              window.location.href = "/people/saminu/";
+            },},{id: "people-sanah-abdullahi-muaz",
+          title: 'Sanah Abdullahi Muaz',
+          description: "Lecturer in Software Engineering at Bayero University,Kano (BUK)",
+          section: "People",handler: () => {
+              window.location.href = "/people/sanah/";
+            },},{id: "people-shamsuddeen-hassan-muhammad",
+          title: 'Shamsuddeen Hassan Muhammad',
+          description: "Lecturer in Computer Science at Bayero University,Kano (BUK)",
+          section: "People",handler: () => {
+              window.location.href = "/people/shamsudeen/";
+            },},{id: "people-dr-moussa-garba",
+          title: 'Dr. Moussa Garba',
+          description: "Founder, Hausa Hackathon Africa",
+          section: "People",handler: () => {
+              window.location.href = "/people/suhail/";
+            },},{id: "people-tajuddeen-rabiu-gwadabe",
+          title: 'Tajuddeen Rabiu Gwadabe',
+          description: "PhD candiate in Computer Science, University of Chinese Academy of Sciences, China.",
+          section: "People",handler: () => {
+              window.location.href = "/people/tajuddeen/";
+            },},{id: "projects-hausa-multimodal-machine-translation",
           title: 'Hausa Multimodal Machine Translation',
           description: "Hausa Machine Translation",
           section: "Projects",handler: () => {
