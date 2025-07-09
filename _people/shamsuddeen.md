@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Ahmadu Shehu
-description: Assistant Professor of English and Literature at the American University of Nigeria, Yola
-img: assets/img/people/ahmadu.jpeg
+title: Shamsuddeen Hassan Muhammad
+description: Lecturer in Computer Science at Bayero University,Kano (BUK)
+img: assets/img/people/shamsuddeen.png
 importance: 1
 category: academics #academics, associates, or students
 related_publications: false
@@ -14,5 +14,5 @@ tabs: true
 # Publications
 
 <ul>
-  {% bibliography --query @*[author~=Ahmadu] %}
+  {% bibliography --query @*[author~=Shamsuddeen] %}
 </ul>
