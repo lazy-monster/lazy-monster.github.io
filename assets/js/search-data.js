@@ -139,7 +139,7 @@ ninja.data = [{
           title: 'Shamsuddeen Hassan Muhammad',
           description: "Lecturer in Computer Science at Bayero University,Kano (BUK)",
           section: "People",handler: () => {
-              window.location.href = "/people/shamsudeen/";
+              window.location.href = "/people/shamsuddeen/";
             },},{id: "people-dr-moussa-garba",
           title: 'Dr. Moussa Garba',
           description: "Founder, Hausa Hackathon Africa",
