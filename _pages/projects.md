@@ -5,7 +5,7 @@ permalink: /projects/
 description: Our work so far.
 nav: true
 nav_order: 3
-display_categories: [Hausa Sentiment Analysis, Hausa Machine Translation]
+display_categories: [In-Progress, Completed]
 horizontal: false
 ---
 

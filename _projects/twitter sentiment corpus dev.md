@@ -4,7 +4,7 @@ title: Development of Nigerian Twitter Sentiment Corpus
 description: "NaijaSenti: Nigerian Twitter Sentiment Corpus"
 img: assets/img/twitter sentiment corpus.jpg
 importance: 1
-category: Hausa Sentiment Analysis
+category: Completed
 related_publications: true
 ---
 

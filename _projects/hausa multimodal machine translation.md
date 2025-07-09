@@ -4,7 +4,7 @@ title: Hausa Multimodal Machine Translation
 description: "Hausa Machine Translation"
 img: assets/img/hausatranslation.jpg
 importance: 1
-category: Hausa Machine Translation
+category: Completed
 related_publications: true
 ---
 
