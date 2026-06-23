@@ -3,188 +3,203 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Samuel Gali — AI Engineer & Researcher</title>
-<meta name="description" content="Gali Ahmad Samuel — AI engineer and researcher in African NLP, sequence-to-sequence models, and agentic systems. University of Lagos.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23161718'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%231a7f5a'/%3E%3C/svg%3E">
+<title>Samuel Gali · African NLP & Agentic AI</title>
+<meta name="description" content="Gali Ahmad Samuel, a final-year CS student researching African NLP and building agentic AI systems at the University of Lagos.">
+<meta name="theme-color" content="#15181D" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F7F8FA" media="(prefers-color-scheme: light)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315181D'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%234E8BE0'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;450;500;600&display=swap" rel="stylesheet">
 <style>
-  /* ── light theme (default) ── */
+  /* ─────────── tokens: light (default) ─────────── */
   :root{
-    --paper:#FBF9F4; --paper-2:#F3F0E8; --card:#ffffff;
-    --ink:#17181A; --ink-soft:#43454a; --muted:#86857d;
-    --line:#E6E2D7; --line-2:#EFEBE1;
-    --accent:#1A7F5A; --accent-2:#14684A; --accent-wash:#E8F2EC;
-    --nav-bg:rgba(251,249,244,.82);
-    --footer-bg:#17181A; --footer-text:#FBF9F4; --footer-muted:#84857f; --footer-accent:#7fd3ab; --footer-line:#34353a;
-    --shadow:rgba(23,24,26,.28);
-    --maxw:1080px;
+    --ground:#F7F8FA; --surface:#FFFFFF; --surface-2:#EEF0F4;
+    --ink:#14171C; --ink-soft:#3A414D; --muted:#6B7280;
+    --line:rgba(20,23,28,.12); --line-soft:rgba(20,23,28,.06);
+    --accent:#2E6FCB; --accent-bright:#3B7DD8; --accent-wash:rgba(46,111,203,.09);
+    --nav:rgba(247,248,250,.80);
+    --shadow:rgba(20,23,28,.12);
+    --maxw:1120px;
   }
-  /* ── dark theme: follows device, unless overridden ── */
+  /* ─────────── tokens: dark (neutral graphite) ─────────── */
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --paper:#121316; --paper-2:#1C1D22; --card:#1A1B20;
-      --ink:#ECEAE3; --ink-soft:#bdbcb4; --muted:#8a8a82;
-      --line:rgba(255,255,255,.10); --line-2:rgba(255,255,255,.055);
-      --accent:#35C089; --accent-2:#5AD3A2; --accent-wash:rgba(53,192,137,.13);
-      --nav-bg:rgba(18,19,22,.82);
-      --footer-bg:#0C0C0F; --footer-text:#ECEAE3; --footer-muted:#7d7e78; --footer-accent:#5AD3A2; --footer-line:rgba(255,255,255,.08);
-      --shadow:rgba(0,0,0,.6);
+      --ground:#15181D; --surface:#1C2027; --surface-2:#242932;
+      --ink:#E6E8EC; --ink-soft:#B4BAC4; --muted:#828A98;
+      --line:rgba(230,232,236,.12); --line-soft:rgba(230,232,236,.06);
+      --accent:#4E8BE0; --accent-bright:#6BA0EA; --accent-wash:rgba(78,139,224,.13);
+      --nav:rgba(21,24,29,.76);
+      --shadow:rgba(0,0,0,.5);
     }
   }
   :root[data-theme="dark"]{
-    --paper:#121316; --paper-2:#1C1D22; --card:#1A1B20;
-    --ink:#ECEAE3; --ink-soft:#bdbcb4; --muted:#8a8a82;
-    --line:rgba(255,255,255,.10); --line-2:rgba(255,255,255,.055);
-    --accent:#35C089; --accent-2:#5AD3A2; --accent-wash:rgba(53,192,137,.13);
-    --nav-bg:rgba(18,19,22,.82);
-    --footer-bg:#0C0C0F; --footer-text:#ECEAE3; --footer-muted:#7d7e78; --footer-accent:#5AD3A2; --footer-line:rgba(255,255,255,.08);
-    --shadow:rgba(0,0,0,.6);
+    --ground:#15181D; --surface:#1C2027; --surface-2:#242932;
+    --ink:#E6E8EC; --ink-soft:#B4BAC4; --muted:#828A98;
+    --line:rgba(230,232,236,.12); --line-soft:rgba(230,232,236,.06);
+    --accent:#4E8BE0; --accent-bright:#6BA0EA; --accent-wash:rgba(78,139,224,.13);
+    --nav:rgba(21,24,29,.76);
+    --shadow:rgba(0,0,0,.5);
   }
 
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    font-family:"Schibsted Grotesk",system-ui,sans-serif;
-    background:var(--paper); color:var(--ink); font-size:17px; line-height:1.6;
-    -webkit-font-smoothing:antialiased; transition:background .3s ease,color .3s ease;
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    background:var(--ground); color:var(--ink);
+    font-size:17px; line-height:1.62; font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    transition:background .3s ease,color .3s ease;
   }
   ::selection{background:var(--accent);color:#fff}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-  .mono{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.06em;
-    text-transform:uppercase;color:var(--accent)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 
-  /* nav */
-  nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);
-    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{font-family:"Instrument Serif",serif;font-size:23px;letter-spacing:.01em}
-  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);
-    margin-right:8px;vertical-align:middle}
-  .navright{display:flex;align-items:center;gap:24px}
-  .navlinks{display:flex;gap:28px;font-family:"JetBrains Mono",monospace;font-size:13px}
+  /* ─────────── nav ─────────── */
+  nav{position:sticky;top:0;z-index:60;background:var(--nav);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line-soft)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:"Fraunces",serif;font-size:22px;letter-spacing:.005em;display:flex;align-items:center;gap:10px}
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--accent)}
+  .navright{display:flex;align-items:center;gap:26px}
+  .navlinks{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px}
   .navlinks a{color:var(--muted);transition:color .2s}
   .navlinks a:hover{color:var(--accent)}
-  .themebtn{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);
-    background:var(--card);color:var(--ink);cursor:pointer;font-size:15px;line-height:1;
+  .themebtn{width:40px;height:40px;border-radius:11px;border:1px solid var(--line);
+    background:var(--surface);color:var(--ink);cursor:pointer;font-size:15px;line-height:1;
     display:flex;align-items:center;justify-content:center;transition:.2s}
   .themebtn:hover{border-color:var(--accent);color:var(--accent)}
-  @media(max-width:700px){.navlinks{display:none}}
+  @media(max-width:760px){.navlinks{display:none}}
 
-  /* hero */
-  header{padding:90px 0 60px;position:relative;overflow:hidden}
-  header::after{content:"";position:absolute;top:-160px;right:-120px;width:480px;height:480px;
-    background:radial-gradient(circle,var(--accent-wash) 0%,transparent 68%);pointer-events:none;z-index:-1}
-  .avail{display:inline-flex;align-items:center;gap:8px;font-family:"JetBrains Mono",monospace;
+  /* ─────────── hero ─────────── */
+  header{padding:96px 0 72px;position:relative}
+  .avail{display:inline-flex;align-items:center;gap:9px;font-family:"IBM Plex Mono",monospace;
     font-size:12px;color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;
-    padding:7px 14px;margin-bottom:26px;background:var(--card)}
+    padding:7px 15px;margin-bottom:30px;background:var(--surface)}
   .avail .pulse{width:8px;height:8px;border-radius:50%;background:var(--accent);
-    box-shadow:0 0 0 0 rgba(26,127,90,.5);animation:pulse 2.2s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(26,127,90,.45)}70%{box-shadow:0 0 0 9px rgba(26,127,90,0)}100%{box-shadow:0 0 0 0 rgba(26,127,90,0)}}
-  h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(54px,10vw,104px);
-    line-height:.96;letter-spacing:-.01em;margin-bottom:20px}
-  .tagline{font-size:clamp(19px,2.6vw,25px);color:var(--ink-soft);max-width:34ch;margin-bottom:14px}
-  .tagline em{font-family:"Instrument Serif",serif;font-style:italic;color:var(--accent);font-size:1.12em}
-  .meta{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--muted);margin-bottom:34px}
+    box-shadow:0 0 0 0 var(--accent-wash);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(78,139,224,.4)}70%{box-shadow:0 0 0 10px rgba(78,139,224,0)}100%{box-shadow:0 0 0 0 rgba(78,139,224,0)}}
+  h1{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(54px,9.5vw,96px);
+    line-height:.98;letter-spacing:-.015em;margin-bottom:24px}
+  .tagline{font-size:clamp(20px,2.6vw,26px);color:var(--ink-soft);max-width:32ch;
+    line-height:1.4;margin-bottom:16px}
+  .meta{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);margin-bottom:32px}
   .social{display:flex;gap:9px;flex-wrap:wrap}
-  .social a{font-family:"JetBrains Mono",monospace;font-size:13px;background:var(--card);
-    border:1px solid var(--line);border-radius:10px;padding:10px 16px;transition:.2s}
+  .social a{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--surface);
+    border:1px solid var(--line);border-radius:9px;padding:9px 14px;transition:.2s;color:var(--ink-soft)}
   .social a:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);
-    box-shadow:0 6px 18px -10px var(--shadow)}
+    box-shadow:0 8px 20px -12px var(--shadow)}
+  .facts{display:flex;flex-wrap:wrap;gap:36px;margin-top:48px;padding-top:30px;border-top:1px solid var(--line-soft)}
+  .facts div{display:flex;flex-direction:column;gap:3px}
+  .facts b{font-family:"Fraunces",serif;font-weight:500;font-size:21px;color:var(--ink)}
+  .facts span{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.04em;color:var(--muted)}
 
-  /* sections */
-  section{padding:64px 0}
-  .shead{display:flex;align-items:baseline;gap:14px;margin-bottom:36px;
-    padding-bottom:16px;border-bottom:1px solid var(--line)}
-  .shead .num{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent)}
-  .shead h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(30px,5vw,46px);letter-spacing:-.01em}
-  .shead .aside{margin-left:auto;font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--muted)}
+  /* ─────────── sections ─────────── */
+  section{padding:60px 0;border-top:1px solid var(--line-soft)}
+  .shead{margin-bottom:38px}
+  .shead .eyebrow{display:block;margin-bottom:12px}
+  .shead h2{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(30px,5vw,42px);
+    letter-spacing:-.015em;line-height:1.04}
+  .shead .aside{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);margin-top:8px}
   .shead .aside a{color:var(--accent)}
 
-  .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
   .rv.in{opacity:1;transform:none}
 
-  /* projects */
-  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-  @media(max-width:760px){.grid{grid-template-columns:1fr}}
-  .proj{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;
+  /* ── projects (uniform cards) ── */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  @media(max-width:780px){.grid{grid-template-columns:1fr}}
+  .proj{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;
     transition:transform .25s,box-shadow .25s,border-color .25s;display:flex;flex-direction:column}
-  .proj:hover{transform:translateY(-3px);box-shadow:0 18px 40px -24px var(--shadow)}
-  .proj .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}
-  .proj .yr{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted);padding-top:4px}
-  .badge{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.05em;
-    text-transform:uppercase;padding:5px 10px;border-radius:999px;white-space:nowrap}
-  .badge.done{background:var(--paper-2);color:var(--ink-soft)}
-  .badge.wip{background:var(--accent-wash);color:var(--accent-2)}
-  .proj h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:25px;line-height:1.15;margin-bottom:10px;letter-spacing:-.01em}
-  .proj p{color:var(--ink-soft);font-size:15.5px;margin-bottom:16px;flex:1}
-  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-  .tags span{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--ink-soft);background:var(--paper-2);border-radius:6px;padding:4px 8px}
-  .mtr{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-  .mtr span{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--muted);border:1px solid var(--line);border-radius:7px;padding:5px 9px}
-  .mtr b{color:var(--accent)}
-  .plinks{display:flex;gap:16px;flex-wrap:wrap;margin-top:auto}
-  .plinks a{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--accent);font-weight:500;transition:.2s}
-  .plinks a:hover{color:var(--accent-2)}
+  .proj:hover{transform:translateY(-4px);box-shadow:0 22px 46px -28px var(--shadow);border-color:var(--accent)}
+  .ptop{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+  .pstatus{display:inline-flex;align-items:center;gap:7px;font-family:"IBM Plex Mono",monospace;
+    font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .pstatus .d{width:7px;height:7px;border-radius:50%;background:var(--muted)}
+  .pstatus.done .d{background:var(--accent)}
+  .pyr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted)}
+  .proj h3{font-family:"Fraunces",serif;font-weight:400;font-size:24px;line-height:1.16;
+    margin-bottom:10px;letter-spacing:-.01em}
+  .proj p{color:var(--ink-soft);font-size:15.5px;margin-bottom:18px;flex:1}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+  .tags span{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-soft);
+    background:var(--surface-2);border-radius:6px;padding:5px 9px}
+  .mtr{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+  .mtr span{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);
+    border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+  .mtr b{color:var(--accent);font-weight:500}
+  .plinks{display:flex;gap:18px;flex-wrap:wrap;margin-top:auto}
+  .plinks a{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--accent);
+    font-weight:500;transition:.2s}
+  .plinks a:hover{color:var(--accent-bright)}
   .plinks a::after{content:" →"}
 
-  /* papers */
-  .paper{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;margin-bottom:16px}
-  .paper .top{display:flex;justify-content:space-between;gap:14px;margin-bottom:12px}
-  .paper h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:24px;line-height:1.22;letter-spacing:-.01em;max-width:60ch}
+  /* ── research ── */
+  .paper{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:30px}
+  .paper .ptop2{display:flex;justify-content:space-between;gap:16px;margin-bottom:14px;align-items:flex-start}
+  .paper h3{font-family:"Fraunces",serif;font-weight:400;font-size:23px;line-height:1.25;
+    letter-spacing:-.01em;max-width:58ch}
+  .pbadge{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;
+    text-transform:uppercase;padding:6px 11px;border-radius:999px;white-space:nowrap;
+    background:var(--accent-wash);color:var(--accent)}
   .paper .authors{color:var(--ink-soft);font-size:14.5px;margin-bottom:5px}
   .paper .authors b{color:var(--ink);font-weight:600}
-  .paper .venue{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--accent);margin-bottom:14px}
-  .paper p{color:var(--ink-soft);font-size:15.5px;margin-bottom:14px;max-width:72ch}
+  .paper .venue{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--accent);margin-bottom:15px}
+  .paper p.abs{color:var(--ink-soft);font-size:15.5px;margin-bottom:16px;max-width:74ch}
 
-  /* writing */
-  .post{display:grid;grid-template-columns:130px 1fr auto;gap:20px;align-items:baseline;
-    padding:22px 0;border-bottom:1px solid var(--line);transition:padding .2s}
-  .post:hover{padding-left:8px}
-  .post .date{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--muted)}
-  .post h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:22px;letter-spacing:-.01em;margin-bottom:4px}
+  /* ── writing ── */
+  .post{display:grid;grid-template-columns:120px 1fr auto;gap:22px;align-items:baseline;
+    padding:22px 0;border-bottom:1px solid var(--line-soft);transition:padding .2s}
+  .post:first-child{border-top:1px solid var(--line-soft)}
+  .post:hover{padding-left:10px}
+  .post .date{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted)}
+  .post h3{font-family:"Fraunces",serif;font-weight:400;font-size:21px;letter-spacing:-.01em;margin-bottom:4px}
   .post p{color:var(--muted);font-size:14.5px}
-  .post .go{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent);white-space:nowrap}
-  .post-loading{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--muted);padding:22px 0}
-  @media(max-width:700px){.post{grid-template-columns:1fr}.post .go{display:none}}
+  .post .go{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--accent);white-space:nowrap}
+  .post-loading{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);padding:22px 0}
+  @media(max-width:720px){.post{grid-template-columns:1fr}.post .go{display:none}}
 
-  /* experience */
-  .exp{display:grid;grid-template-columns:1fr 190px;gap:20px;padding:26px 0;border-bottom:1px solid var(--line)}
-  .exp h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:23px;margin-bottom:2px}
-  .exp .org{color:var(--accent);font-size:15px;margin-bottom:14px}
-  .exp .when{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--muted);text-align:right}
-  .exp ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-  .exp li{color:var(--ink-soft);font-size:15px;padding-left:18px;position:relative;max-width:68ch}
-  .exp li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
-  @media(max-width:700px){.exp{grid-template-columns:1fr}.exp .when{text-align:left}}
+  /* ── experience ── */
+  .exp{display:grid;grid-template-columns:1fr 200px;gap:24px;padding:28px 0;border-bottom:1px solid var(--line-soft)}
+  .exp:first-child{border-top:1px solid var(--line-soft)}
+  .exp h3{font-family:"Fraunces",serif;font-weight:400;font-size:22px;margin-bottom:3px}
+  .exp .org{color:var(--accent);font-size:14.5px;margin-bottom:15px}
+  .exp .when{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);text-align:right}
+  .exp ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .exp li{color:var(--ink-soft);font-size:15px;padding-left:20px;position:relative;max-width:70ch}
+  .exp li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;
+    border-radius:50%;background:var(--accent)}
+  @media(max-width:720px){.exp{grid-template-columns:1fr}.exp .when{text-align:left}}
 
-  /* skills + edu */
-  .skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-  .skill{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
-  .skill .k{margin-bottom:10px}
-  .skill .v{font-size:15px;color:var(--ink-soft);line-height:1.6}
-  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
-  .block{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
-  .block h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:21px;margin-bottom:3px}
+  /* ── skills + education ── */
+  .skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .skill{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .skill .k{margin-bottom:11px}
+  .skill .v{font-size:14.5px;color:var(--ink-soft);line-height:1.65}
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+  .block{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .block h3{font-family:"Fraunces",serif;font-weight:400;font-size:21px;margin-bottom:3px}
   .block .sub{color:var(--accent);font-size:14px;margin-bottom:4px}
-  .block .when{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted);margin-bottom:12px}
+  .block .when{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);margin-bottom:13px}
   .block p{color:var(--ink-soft);font-size:14.5px}
-  @media(max-width:700px){.twocol{grid-template-columns:1fr}}
+  @media(max-width:720px){.twocol{grid-template-columns:1fr}}
 
-  /* footer */
-  footer{background:var(--footer-bg);color:var(--footer-text);padding:80px 0 50px;margin-top:50px;transition:background .3s}
-  footer .big{font-family:"Instrument Serif",serif;font-size:clamp(34px,6vw,60px);line-height:1.05;letter-spacing:-.01em;margin-bottom:30px;max-width:18ch}
-  footer .big a{color:var(--footer-accent);border-bottom:2px solid transparent;transition:.2s}
-  footer .big a:hover{border-color:var(--footer-accent)}
-  footer .social a{background:transparent;border-color:var(--footer-line);color:var(--footer-text)}
-  footer .social a:hover{border-color:var(--footer-accent);color:var(--footer-accent)}
-  footer .end{margin-top:36px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
-    font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--footer-muted)}
+  /* ── footer ── */
+  footer{border-top:1px solid var(--line);padding:80px 0 54px;margin-top:30px}
+  footer .big{font-family:"Fraunces",serif;font-size:clamp(32px,6vw,54px);line-height:1.08;
+    letter-spacing:-.015em;margin-bottom:14px;max-width:17ch}
+  footer .big a{color:var(--accent);border-bottom:2px solid transparent;transition:.2s}
+  footer .big a:hover{border-color:var(--accent)}
+  footer .fnote{color:var(--muted);font-size:15px;margin-bottom:30px;max-width:48ch}
+  footer .end{margin-top:38px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+    font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted)}
 
   @media(prefers-reduced-motion:reduce){
-    *{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}
+    *{animation:none!important;transition:none!important}
+    .rv{opacity:1;transform:none}
   }
 </style>
 </head>
@@ -195,84 +210,106 @@
     <a class="brand" href="#top"><span class="dot"></span>Samuel Gali</a>
     <div class="navright">
       <div class="navlinks">
-        <a href="#projects">projects</a>
+        <a href="#work">work</a>
         <a href="#research">research</a>
         <a href="#writing">writing</a>
         <a href="#experience">experience</a>
         <a href="#contact">contact</a>
       </div>
-      <button class="themebtn" id="theme" aria-label="Toggle dark mode">☾</button>
+      <button class="themebtn" id="theme" aria-label="Toggle colour theme">☾</button>
     </div>
   </div>
 </nav>
 
 <header id="top">
   <div class="wrap">
-    <div class="avail"><span class="pulse"></span>Open to research &amp; AI engineering opportunities</div>
+    <div class="avail"><span class="pulse"></span>Open to research &amp; engineering roles</div>
     <h1>Samuel Gali</h1>
-    <p class="tagline">AI engineer &amp; researcher building <em>African NLP</em> and agentic systems.</p>
-    <p class="meta">Final-year Computer Science · University of Lagos · Lagos, Nigeria</p>
+    <p class="tagline">Final-year CS student researching African NLP and building agentic AI systems.</p>
+    <p class="meta">Computer Science · University of Lagos · Lagos, Nigeria</p>
     <div class="social">
       <a href="mailto:galisamuel97@gmail.com">email</a>
       <a href="https://github.com/lazy-monster" target="_blank" rel="noopener">github</a>
       <a href="https://huggingface.co/lazymonster" target="_blank" rel="noopener">hugging face</a>
-      <a href="https://linkedin.com/in/samuelgali" target="_blank" rel="noopener">linkedin</a>
+      <a href="https://www.linkedin.com/in/samuelgali" target="_blank" rel="noopener">linkedin</a>
+      <a href="https://x.com/lazy_maxxing" target="_blank" rel="noopener">x</a>
       <a href="https://medium.com/@lazy-monster" target="_blank" rel="noopener">medium</a>
+    </div>
+    <div class="facts">
+      <div><b>EACL 2026</b><span>peer-reviewed paper</span></div>
+      <div><b>Dyon</b><span>framework on PyPI</span></div>
+      <div><b>Hugging Face</b><span>models &amp; live demos</span></div>
     </div>
   </div>
 </header>
 
-<section id="projects">
+<section id="work">
   <div class="wrap">
-    <div class="shead rv"><span class="num">01</span><h2>Projects</h2></div>
+    <div class="shead">
+      <span class="eyebrow">What I build</span>
+      <h2>Selected work</h2>
+    </div>
     <div class="grid" id="proj-grid"></div>
   </div>
 </section>
 
 <section id="research">
   <div class="wrap">
-    <div class="shead rv"><span class="num">02</span><h2>Research</h2></div>
+    <div class="shead">
+      <span class="eyebrow">Peer-reviewed</span>
+      <h2>Research</h2>
+    </div>
     <div id="paper-list"></div>
   </div>
 </section>
 
 <section id="writing">
   <div class="wrap">
-    <div class="shead rv"><span class="num">03</span><h2>Writing</h2>
-      <span class="aside">live from <a href="https://medium.com/@lazy-monster" target="_blank" rel="noopener">Medium →</a></span></div>
+    <div class="shead">
+      <span class="eyebrow">Essays &amp; notes</span>
+      <h2>Writing</h2>
+      <div class="aside">Latest from <a href="https://medium.com/@lazy-monster" target="_blank" rel="noopener">Medium →</a></div>
+    </div>
     <div id="post-list"><div class="post-loading">loading posts from Medium…</div></div>
   </div>
 </section>
 
 <section id="experience">
   <div class="wrap">
-    <div class="shead rv"><span class="num">04</span><h2>Experience</h2></div>
+    <div class="shead">
+      <span class="eyebrow">Roles</span>
+      <h2>Experience</h2>
+    </div>
     <div id="exp-list"></div>
   </div>
 </section>
 
 <section id="skills">
   <div class="wrap">
-    <div class="shead rv"><span class="num">05</span><h2>Skills</h2></div>
+    <div class="shead">
+      <span class="eyebrow">Tools &amp; background</span>
+      <h2>Skills &amp; education</h2>
+    </div>
     <div class="skillgrid rv">
-      <div class="skill"><div class="k mono">Languages</div><div class="v">Python, R, Java, C++</div></div>
-      <div class="skill"><div class="k mono">Deep Learning</div><div class="v">PyTorch, TensorFlow, FastAI</div></div>
-      <div class="skill"><div class="k mono">NLP / ML</div><div class="v">Hugging Face Transformers, Scikit-learn, ByT5, seq2seq</div></div>
-      <div class="skill"><div class="k mono">Agentic AI</div><div class="v">LangGraph, LLM APIs, tool-use, state-aware agents</div></div>
-      <div class="skill"><div class="k mono">Data</div><div class="v">NumPy, Pandas, Matplotlib, Seaborn</div></div>
-      <div class="skill"><div class="k mono">Infrastructure</div><div class="v">Google Cloud (TPU v6e-8), Git, Jupyter, SQL</div></div>
+      <div class="skill"><div class="k eyebrow">Languages</div><div class="v">Python · R · Java · C++</div></div>
+      <div class="skill"><div class="k eyebrow">Deep learning</div><div class="v">PyTorch · TensorFlow · fast.ai</div></div>
+      <div class="skill"><div class="k eyebrow">NLP &amp; ML</div><div class="v">Hugging Face Transformers · ByT5 &amp; seq2seq · scikit-learn</div></div>
+      <div class="skill"><div class="k eyebrow">Agentic AI</div><div class="v">LangGraph · LLM tool-use · state-aware agents</div></div>
+      <div class="skill"><div class="k eyebrow">Data</div><div class="v">NumPy · pandas · Matplotlib · seaborn</div></div>
+      <div class="skill"><div class="k eyebrow">Infrastructure</div><div class="v">Google Cloud TPU (v6e-8) · Git · SQL · Jupyter</div></div>
     </div>
     <div class="twocol">
       <div class="block rv">
-        <h3>BSc Computer Science</h3>
+        <h3>BSc, Computer Science</h3>
         <div class="sub">University of Lagos</div>
         <div class="when">2021 – 2026 · GPA 4.44 / 5.0</div>
         <p>Algorithms &amp; complexity, data structures, statistical methods, discrete mathematics.</p>
       </div>
       <div class="block rv">
-        <h3>Courses &amp; Affiliations</h3>
+        <h3>Continued study</h3>
         <div class="when">ongoing</div>
-        <p>fast.ai Deep Learning for Coders · Hugging Face LLM Course<br>HausaNLP Research Group · Arewa Data Science Academy</p>
+        <p>fast.ai Deep Learning for Coders · Hugging Face LLM Course.<br>
+           Affiliated with HausaNLP and the Arewa Data Science Academy.</p>
       </div>
     </div>
   </div>
@@ -280,55 +317,57 @@
 
 <footer id="contact">
   <div class="wrap">
-    <div class="big">Let's build something. <a href="mailto:galisamuel97@gmail.com">Get in touch</a>.</div>
+    <div class="big">Building something in African NLP or agentic AI? <a href="mailto:galisamuel97@gmail.com">Let's talk.</a></div>
+    <p class="fnote">Open to research collaborations, contract work, and full-time roles in NLP and agentic AI engineering.</p>
     <div class="social">
       <a href="mailto:galisamuel97@gmail.com">galisamuel97@gmail.com</a>
       <a href="https://github.com/lazy-monster" target="_blank" rel="noopener">github</a>
       <a href="https://huggingface.co/lazymonster" target="_blank" rel="noopener">hugging face</a>
-      <a href="https://linkedin.com/in/samuelgali" target="_blank" rel="noopener">linkedin</a>
+      <a href="https://www.linkedin.com/in/samuelgali" target="_blank" rel="noopener">linkedin</a>
+      <a href="https://x.com/lazy_maxxing" target="_blank" rel="noopener">x</a>
       <a href="https://medium.com/@lazy-monster" target="_blank" rel="noopener">medium</a>
     </div>
     <div class="end"><span>© 2026 Gali Ahmad Samuel</span><span>Lagos, Nigeria</span></div>
   </div>
 </footer>
 
-<!-- ════════════════════════════════════════════════════════════════════
-     EDIT YOUR CONTENT HERE. Projects / papers / experience live in DATA.
-     Blog posts load automatically from Medium (set MEDIUM_USER below).
-     status: "done" or "wip"  ·  links/metrics optional (use []).
-     ════════════════════════════════════════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════════════════════════
+     CONTENT lives in DATA below. Blog posts load live from Medium.
+     status: "done" (shipped) or "wip" (in progress) · links/metrics optional.
+     ══════════════════════════════════════════════════════════════════════ -->
 <script>
-const MEDIUM_USER = "lazy-monster";   // ← your Medium @handle (no @)
+const MEDIUM_USER = "lazy-monster";
 
 const DATA = {
   projects: [
     {
-      title: "Yo-ByT5 — Yorùbá Diacritic Restoration", year: "2025", status: "done",
-      desc: "A byte-level T5 that restores tone marks and underdots to plain Yorùbá text — preprocessing for TTS, machine translation, and linguistic annotation.",
+      title: "Dyon: Agentic Cross-Domain Digital Twins", year: "2026", status: "done",
+      desc: "A source-available Python framework (~9,600 LOC) for building agentic cross-domain digital twins, validated by a three-twin Salesman / Customer / Product system. Published on PyPI.",
+      tags: ["Python","LangChain","Reinforcement Learning","Eclipse Ditto"], metrics: [],
+      links: [["pypi","https://pypi.org/project/dyon/"],["github","https://github.com/lazy-monster/dyon"]]
+    },
+    {
+      title: "Yo-ByT5: Yorùbá Diacritic Restoration", year: "2025", status: "done",
+      desc: "A byte-level T5 that restores tone marks and underdots to plain Yorùbá text, used to preprocess data for TTS, machine translation, and linguistic annotation.",
       tags: ["ByT5","TensorFlow","TPU v6e-8","Hugging Face"],
       metrics: [["83.8%","word acc"],["92.4%","underdots"],["83.9","ChrF"]],
       links: [["live demo","https://huggingface.co/spaces/lazymonster/yobyt5-demo"],["model","https://huggingface.co/lazymonster/yobyt5-restoration"]]
     },
     {
       title: "Yorùbá AI-Generated Text Detector", year: "2025", status: "done",
-      desc: "A transformer classifier separating human-written Yorùbá from LLM output — among the first such systems for a low-resource tonal language.",
+      desc: "A transformer classifier separating human-written Yorùbá from LLM output, among the first such systems for a low-resource tonal language.",
       tags: ["PyTorch","HF Transformers","Gradio"], metrics: [],
       links: [["live demo","https://huggingface.co/spaces/lazymonster/yoruba-ai-detector"]]
     },
     {
-      title: "DT-Forge — Agentic Cross-Domain Digital Twins", year: "2026", status: "wip",
-      desc: "An open-source Python framework for building agentic cross-domain digital twins (~7,600 LOC), validated by a three-twin Salesman/Customer/Product system. Three papers in preparation.",
-      tags: ["Python","LangChain","Reinforcement Learning","Eclipse Ditto"], metrics: [], links: []
-    },
-    {
-      title: "Oracle — Autonomous Decision-Making Agent", year: "2024–now", status: "wip",
-      desc: "An agent that ingests live data streams, holds persistent state, and executes decisions over the Discord API — perception → reasoning → action.",
+      title: "Oracle: Autonomous Economy Agent", year: "2024–now", status: "wip",
+      desc: "An agent that ingests a live game economy (Torn City), holds persistent state, and acts over the Discord API, closing a perception → reasoning → action loop.",
       tags: ["Python","Agentic Workflows","State Management","Discord API"], metrics: [], links: []
     },
     {
       title: "Facial Expression Recognition (FER2013)", year: "2024–25", status: "done",
       desc: "Benchmarked CNN architectures on FER2013 with ablation studies on depth and regularisation, then deployed the best model.",
-      tags: ["PyTorch","FastAI","CNNs"], metrics: [],
+      tags: ["PyTorch","fast.ai","CNNs"], metrics: [],
       links: [["live demo","https://huggingface.co/spaces/lazymonster/facial-emotion-recognition"]]
     }
   ],
@@ -336,17 +375,10 @@ const DATA = {
     {
       title: "Trust but Check: LLM-Assisted Review of Human Translations in African Languages",
       authors: "Tadesse Destaw Belay, Henok Biadglign Ademtew, Idris Abdulmumin, … <b>Gali Ahmad Samuel</b>, et al.",
-      venue: "EACL 2026 Workshop · AfricaNLP · published 27 Jan 2026", status: "Published",
+      venue: "EACL 2026 · AfricaNLP Workshop · published 27 Jan 2026", status: "Published",
       desc: "Multilingual LLMs used to audit translation quality across 11 low-resource African languages, combining LLM-as-a-judge with native-speaker review and automated metrics on the MAFAND-MT test set.",
       metrics: [["+0.4–9.27","BLEU"],["+0.3–8.69","ChrF"],["11","languages"]],
       link: ["read on OpenReview","https://openreview.net/forum?id=8B2WDhIAMV"]
-    },
-    {
-      title: "An Agentic Cross-Domain Digital Twin Framework (three-paper series)",
-      authors: "<b>Gali Ahmad Samuel</b>",
-      venue: "In preparation · 2026", status: "In preparation",
-      desc: "A six-layer agentic cross-domain digital-twin architecture, its open-source implementation (DT-Forge), and a Salesman Digital Twin application — packaged as three independently publishable papers.",
-      metrics: [], link: null
     }
   ],
   experience: [
@@ -355,7 +387,7 @@ const DATA = {
       when: "May 2025 – Nov 2025 · Lagos, NG",
       points: [
         "Audited translation quality across 11 African languages on the MAFAND-MT dataset.",
-        "Fine-tuned seq2seq transformers on Google Cloud TPU v6e-8 via the Google TPU Research Cloud grant.",
+        "Fine-tuned seq2seq transformers on Google Cloud TPU v6e-8 via the TPU Research Cloud grant.",
         "Co-authored the EACL 2026 AfricaNLP paper.",
         "Built an LLM-as-a-judge pipeline alongside BLEU/ChrF and native-speaker review."
       ]
@@ -367,70 +399,72 @@ const DATA = {
   ]
 };
 
-/* ── theme toggle (follows device by default; manual choice is saved) ── */
+/* ── theme toggle: follows device by default, manual choice persisted ── */
 (function(){
-  const root = document.documentElement, btn = document.getElementById('theme');
-  const get = () => { try { return localStorage.getItem('theme'); } catch(e){ return null; } };
-  const set = (v) => { try { localStorage.setItem('theme', v); } catch(e){} };
-  const saved = get(); if (saved) root.setAttribute('data-theme', saved);
-  const mq = window.matchMedia('(prefers-color-scheme: dark)');
-  const isDark = () => { const t = root.getAttribute('data-theme'); return t ? t==='dark' : mq.matches; };
-  const sync = () => { btn.textContent = isDark() ? '☀' : '☾'; };
-  btn.addEventListener('click', () => { const d=!isDark(); root.setAttribute('data-theme', d?'dark':'light'); set(d?'dark':'light'); sync(); });
-  mq.addEventListener('change', () => { if(!get()) sync(); });
+  const root=document.documentElement, btn=document.getElementById('theme');
+  const get=()=>{try{return localStorage.getItem('theme');}catch(e){return null;}};
+  const set=(v)=>{try{localStorage.setItem('theme',v);}catch(e){}};
+  const saved=get(); if(saved) root.setAttribute('data-theme',saved);
+  const mq=window.matchMedia('(prefers-color-scheme: dark)');
+  const isDark=()=>{const t=root.getAttribute('data-theme');return t?t==='dark':mq.matches;};
+  const sync=()=>{btn.textContent=isDark()?'☀':'☾';};
+  btn.addEventListener('click',()=>{const d=!isDark();root.setAttribute('data-theme',d?'dark':'light');set(d?'dark':'light');sync();});
+  mq.addEventListener('change',()=>{if(!get())sync();});
   sync();
 })();
 
 /* ── render helpers ── */
-const el = (h) => { const t=document.createElement('template'); t.innerHTML=h.trim(); return t.content.firstChild; };
+const el=(h)=>{const t=document.createElement('template');t.innerHTML=h.trim();return t.content.firstChild;};
 
-document.getElementById('proj-grid').append(...DATA.projects.map(p => el(`
+document.getElementById('proj-grid').append(...DATA.projects.map(p=>el(`
   <article class="proj rv">
-    <div class="top"><span class="yr">${p.year}</span>
-      <span class="badge ${p.status}">${p.status==='wip'?'In progress':'Completed'}</span></div>
+    <div class="ptop">
+      <span class="pstatus ${p.status==='done'?'done':''}"><span class="d"></span>${p.status==='done'?'Released':'In progress'}</span>
+      <span class="pyr">${p.year}</span>
+    </div>
     <h3>${p.title}</h3><p>${p.desc}</p>
     ${p.tags.length?`<div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>`:''}
     ${p.metrics.length?`<div class="mtr">${p.metrics.map(m=>`<span><b>${m[0]}</b> ${m[1]}</span>`).join('')}</div>`:''}
     ${p.links.length?`<div class="plinks">${p.links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener">${l[0]}</a>`).join('')}</div>`:''}
   </article>`)));
 
-document.getElementById('paper-list').append(...DATA.papers.map(p => el(`
+document.getElementById('paper-list').append(...DATA.papers.map(p=>el(`
   <article class="paper rv">
-    <div class="top"><h3>${p.title}</h3><span class="badge ${p.status==='Published'?'done':'wip'}">${p.status}</span></div>
-    <p class="authors">${p.authors}</p><p class="venue">${p.venue}</p><p>${p.desc}</p>
+    <div class="ptop2"><h3>${p.title}</h3><span class="pbadge">${p.status}</span></div>
+    <p class="authors">${p.authors}</p><p class="venue">${p.venue}</p><p class="abs">${p.desc}</p>
     ${p.metrics.length?`<div class="mtr">${p.metrics.map(m=>`<span><b>${m[0]}</b> ${m[1]}</span>`).join('')}</div>`:''}
     ${p.link?`<div class="plinks"><a href="${p.link[1]}" target="_blank" rel="noopener">${p.link[0]}</a></div>`:''}
   </article>`)));
 
-document.getElementById('exp-list').append(...DATA.experience.map(e => el(`
+document.getElementById('exp-list').append(...DATA.experience.map(e=>el(`
   <div class="exp rv"><div><h3>${e.role}</h3><div class="org">${e.org}</div>
     <ul>${e.points.map(pt=>`<li>${pt}</li>`).join('')}</ul></div>
     <div class="when">${e.when}</div></div>`)));
 
-/* scroll reveal (for the synchronous content) */
-const io = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1});
+/* scroll reveal */
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(n=>io.observe(n));
 
 /* ── live Medium feed ── */
-const strip = (h)=>{const d=document.createElement('div');d.innerHTML=h||'';let t=(d.textContent||'').trim().replace(/\s+/g,' ');return t.length>150?t.slice(0,150).trim()+'…':t;};
-const fmt = (s)=>{const d=new Date(s);return isNaN(d)?'':d.toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'});};
-const feedUrl = `https://medium.com/feed/@${MEDIUM_USER}`;
+const strip=(h)=>{const d=document.createElement('div');d.innerHTML=h||'';let t=(d.textContent||'').trim().replace(/\s+/g,' ');return t.length>150?t.slice(0,150).trim()+'…':t;};
+const fmt=(s)=>{const d=new Date(s);return isNaN(d)?'':d.toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'});};
+const feedUrl=`https://medium.com/feed/@${MEDIUM_USER}`;
 
 async function viaAllOrigins(){
-  const r = await fetch('https://api.allorigins.win/raw?url='+encodeURIComponent(feedUrl));
+  const r=await fetch('https://api.allorigins.win/raw?url='+encodeURIComponent(feedUrl));
   if(!r.ok) throw 0;
-  const doc = new DOMParser().parseFromString(await r.text(),'application/xml');
+  const doc=new DOMParser().parseFromString(await r.text(),'application/xml');
   return [...doc.querySelectorAll('item')].map(it=>({
-    title: it.querySelector('title')?.textContent || 'Untitled',
-    url: it.querySelector('link')?.textContent || `https://medium.com/@${MEDIUM_USER}`,
-    date: it.querySelector('pubDate')?.textContent || '',
-    blurb: strip(it.querySelector('description')?.textContent)
+    title:it.querySelector('title')?.textContent||'Untitled',
+    url:it.querySelector('link')?.textContent||`https://medium.com/@${MEDIUM_USER}`,
+    date:it.querySelector('pubDate')?.textContent||'',
+    blurb:strip(it.querySelector('description')?.textContent)
   }));
 }
 async function viaRss2json(){
-  const r = await fetch('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(feedUrl));
+  const r=await fetch('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(feedUrl));
   if(!r.ok) throw 0;
-  const j = await r.json(); if(j.status!=='ok'||!j.items) throw 0;
+  const j=await r.json(); if(j.status!=='ok'||!j.items) throw 0;
   return j.items.map(i=>({title:i.title,url:i.link,date:i.pubDate,blurb:strip(i.description||i.content)}));
 }
 function renderPosts(items){
@@ -442,17 +476,17 @@ function renderPosts(items){
       <span class="go">read on Medium →</span></a>`)));
 }
 function fallback(){
-  document.getElementById('post-list').innerHTML =
+  document.getElementById('post-list').innerHTML=
     `<a class="post" href="https://medium.com/@${MEDIUM_USER}" target="_blank" rel="noopener">`
     +`<span class="date">—</span><span><h3>Read my writing on Medium</h3>`
     +`<p>Posts load automatically here; the feed just couldn't be reached right now. Click to open Medium.</p></span>`
     +`<span class="go">open Medium →</span></a>`;
 }
-(async ()=>{
+(async()=>{
   try{
     let items;
-    try{ items = await viaAllOrigins(); }catch(e){ items = await viaRss2json(); }
-    if(items && items.length) renderPosts(items); else fallback();
+    try{ items=await viaAllOrigins(); }catch(e){ items=await viaRss2json(); }
+    if(items&&items.length) renderPosts(items); else fallback();
   }catch(e){ fallback(); }
 })();
 </script>
